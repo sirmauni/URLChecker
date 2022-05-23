@@ -1,7 +1,7 @@
-# Bulk 404 page script
-# fetches URL for 404 status
-# if not 404, checks response/content for URLs
-# recurssively searches for links found in content
+# Checks list of urls provided in URLChecker.config file for broken list.
+# Returns JSON object detailing "Working" or "Not Working".
+# Working: http(s) request returned with status code 200.
+# Not Working: http(s) request did not return 200.
 
 import requests;
 import re;
@@ -16,6 +16,7 @@ config = None;
 with open("./URLChecker.config") as file:
 	config = json.loads(file.read());
 
+# construct URL checker with configuration data
 uChecker = URLChecker(config);
 
 # iter counter for URL list
@@ -56,5 +57,6 @@ while currentIndex < uChecker.getURLListLength() :
 	
 	# increment index 
 	currentIndex += 1;
-	
+
+# print JSON data to console
 print(json.dumps(uChecker.getURLMap(), indent=4));

@@ -1,4 +1,4 @@
-# Title:
+# URL Checker
 Bulk 404 page script
 
 ## Details:
