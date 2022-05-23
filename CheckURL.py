@@ -3,11 +3,8 @@
 # Working: http(s) request returned with status code 200.
 # Not Working: http(s) request did not return 200.
 
-import requests;
-import re;
 import json;
 from URLChecker import URLChecker;
-import sys;
 
 # config data
 config = None;
