@@ -4,7 +4,7 @@ A python script for checking the status of web pages and any links stored on the
 ## Language
 python3
 
-# Dependencies
+## Dependencies
 native python libraries:<br />
 **requests** <br />
 **json** <br />
